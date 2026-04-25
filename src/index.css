@@ -1,12 +1,49 @@
+
 @import 'tailwindcss';
 
-@theme {
-  --color-accent: #2563eb;
-  --color-accent-light: #3b82f6;
-  --color-marked: #dcfce7;
-  --color-marked-border: #22c55e;
-  --color-bingo: #fbbf24;
+/* Cyberpunk Neon Theme Variables */
+:root {
+  --cyberpunk-bg: #0f1021;
+  --cyberpunk-panel: #23243a;
+  --neon-pink: #ff00ea;
+  --neon-blue: #00eaff;
+  --neon-green: #39ff14;
+  --neon-yellow: #fff700;
+  --neon-orange: #ff9900;
+  --neon-purple: #a020f0;
+  --neon-red: #ff3131;
+  --neon-glow: #00fff7;
 }
+
+body {
+  background: var(--cyberpunk-bg);
+  color: var(--neon-blue);
+  font-family: 'Orbitron', system-ui, -apple-system, sans-serif;
+  text-shadow: 0 0 8px var(--neon-blue), 0 0 16px var(--neon-pink);
+}
+
+a {
+  color: var(--neon-pink);
+  text-shadow: 0 0 4px var(--neon-pink);
+}
+
+.neon-glow {
+  text-shadow: 0 0 8px var(--neon-glow), 0 0 16px var(--neon-blue);
+}
+
+.cyber-panel {
+  background: var(--cyberpunk-panel);
+  border: 2px solid var(--neon-pink);
+  box-shadow: 0 0 16px var(--neon-pink), 0 0 32px var(--neon-blue);
+  border-radius: 1rem;
+}
+
+.neon-border {
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0 0 8px var(--neon-blue), 0 0 16px var(--neon-pink);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
 html,
 body,

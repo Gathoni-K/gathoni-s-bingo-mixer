@@ -2,14 +2,14 @@ import type { BingoSquareData } from '../types';
 import { BingoSquare } from './BingoSquare';
 
 interface BingoBoardProps {
-  board: BingoSquareData[];
-  winningSquareIds: Set<number>;
-  onSquareClick: (squareId: number) => void;
+  readonly board: BingoSquareData[];
+  readonly winningSquareIds: Set<number>;
+  readonly onSquareClick: (squareId: number) => void;
 }
 
 export function BingoBoard({ board, winningSquareIds, onSquareClick }: BingoBoardProps) {
   return (
-    <div className="grid grid-cols-5 gap-1 w-full max-w-md mx-auto aspect-square">
+    <div className="cyber-panel grid grid-cols-5 gap-2 w-full max-w-md mx-auto aspect-square p-2 shadow-neon">
       {board.map((square) => (
         <BingoSquare
           key={square.id}
